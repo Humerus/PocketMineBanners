@@ -6,7 +6,7 @@ $font = './minecraft.ttf';
 try{
         switch($_REQUEST['id']){
                 case 0:
-        		$Query->connect($_REQUEST['ip'].":".$_REQUEST['port']);
+        		$Query->connect($_REQUEST['ip'], $_REQUEST['port'], 1);
         		$info = $Query->GetInfo();
         		$im = imagecreatefrompng("open.png");
         		$white = imagecolorallocate($im, 255, 255, 255);
@@ -17,7 +17,7 @@ try{
 	        	imagedestroy($im);
                         break;
                 case 1:
-	        	$Query->connect($_REQUEST['ip'].":".$_REQUEST['port']);
+	        	$Query->connect($_REQUEST['ip'], $_REQUEST['port'], 1);
 	        	$info = $Query->GetInfo();
 	        	$im = imagecreatefrompng("banner1.png");
 	        	$white = imagecolorallocate($im, 255, 255, 255);
@@ -30,7 +30,7 @@ try{
 		        imagedestroy($im);
                         break;
                 case 2:
-		        $Query->connect($_REQUEST['ip'].":".$_REQUEST['port']);
+		        $Query->connect($_REQUEST['ip'], $_REQUEST['port'], 1);
         		$info = $Query->GetInfo();
         		$im = imagecreatefrompng("banner2.png");
         		$white = imagecolorallocate($im, 255, 255, 255);
