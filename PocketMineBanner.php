@@ -49,7 +49,7 @@ catch(MinecraftQueryException $e){
                 case 0:
                         $im = imagecreatefrompng("closed.png");
                         $white = imagecolorallocate($im, 255, 255, 255);
-                        imagefttext($im, 21, 0, 690, 60, $white, $font, "-"]);
+                        imagefttext($im, 21, 0, 690, 60, $white, $font, "-");
                         imagefttext($im, 21, 0, 750, 60, $white, $font, "-");
                         imagefttext($im, 21, 0, 30, 60, $white, $font, $_REQUEST['servername']);
                         imagepng($im);
