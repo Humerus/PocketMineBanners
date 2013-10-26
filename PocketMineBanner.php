@@ -10,8 +10,8 @@ try{
         		$info = $Query->GetInfo();
         		$im = imagecreatefrompng("open.png");
         		$white = imagecolorallocate($im, 255, 255, 255);
-       			imagefttext($im, 21, 0, 690, 60, $white, $font, $info['Players']);
-	        	imagefttext($im, 21, 0, 750, 60, $white, $font, $info['MaxPlayers']);
+       			imagefttext($im, 21, 0, 680, 60, $white, $font, $info['Players']);
+	        	imagefttext($im, 21, 0, 740, 60, $white, $font, $info['MaxPlayers']);
 	        	imagefttext($im, 21, 0, 30, 60, $white, $font, $info['HostName']);
 	        	imagepng($im);
 	        	imagedestroy($im);
